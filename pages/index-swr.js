@@ -5,7 +5,7 @@ import useSWR from 'swr'
 import { fetchApi } from '../services/api'
 
 export default function Home() {
-    const { data, error } = useSWR('fatcs', fetchApi)
+    const { data, error } = useSWR('https://catfact.ninja/facts?limit=5')
     if (error) return <div>Failed to load...</div>
     if (!data) return <div> Loading...</div>
     const datas = data.data
