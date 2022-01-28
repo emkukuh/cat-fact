@@ -1,18 +1,18 @@
-import 'antd/dist/antd.css'
-import { PageHeader, Button } from 'antd'
-import { SmileOutlined } from '@ant-design/icons'
+import { Layout, Button, Menu } from 'antd'
+import style from './navbar.module.css'
 
+const { Header } = Layout
 
 export default function Navbar() {
     return (
-        <div>
-            <PageHeader
-                ghost={false}
-                title="List Fakta Kucing"
-                extra={[
-                    <Button type='primary' shape='round'><SmileOutlined /> Koceng</Button>
-                ]}
-            />
-        </div>
+        <Header>
+            <div className={style.logo} />
+            <Menu theme='dark' mode='horizontal'>
+                {new Array(5).fill(null).map((_, index) => {
+                    const key = index + 1
+                    return <Menu.Item key={key}>{`menu item num ${key}`}</Menu.Item>
+                })}
+            </Menu>
+        </Header >
     )
 }
