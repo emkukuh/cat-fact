@@ -1,5 +1,5 @@
 import { Layout, Button, Menu } from 'antd'
-import style from './navbar.module.css'
+import style from './index.module.css'
 
 const { Header } = Layout
 
