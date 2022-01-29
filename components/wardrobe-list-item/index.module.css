@@ -1,0 +1,24 @@
+.container {
+    margin-top: 8px;
+    /* justify-content: space-between; */
+}
+
+.tag {
+    padding: auto;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.image {
+    width: 114px;
+    height: 70px;
+    background-color: red;
+}
+
+.email {
+    font-weight: bold;
+}
+
+.itemMeta {
+    margin-left: 12px;
+}

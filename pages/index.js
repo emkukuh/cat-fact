@@ -1,7 +1,7 @@
-import 'antd/dist/antd.css'
+
 import { List, Avatar, Layout } from 'antd'
 import Navbar from '../components/navbar'
-import SideNav from 'components/sideNav'
+import Sidebar from 'components/sidebar'
 import { useGetCatFacts } from '../services/api'
 
 const { Content } = Layout
@@ -14,7 +14,7 @@ export default function Home() {
             <Layout>
                 <Navbar />
                 <Layout>
-                    <SideNav />
+                    <Sidebar />
                     <Layout>
                         <Content>
                             <List

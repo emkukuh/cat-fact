@@ -13,6 +13,11 @@ export const fetchApi = async (endpoint) => {
     return await response.json()
 }
 
+const fetchLocalApi = async (endPoint) => {
+    const response = await fetch(endPoint)
+    return await response.json()
+}
+
 const useApi = endpoint => {
     const { data, error, isValidating } = useSWR(endpoint)
     return {
@@ -22,4 +27,14 @@ const useApi = endpoint => {
     }
 }
 
+const useLocalApi = endpoint => {
+    const { data, error, isValidating } = useSWR(endpoint, fetchLocalApi)
+    return {
+        loading: isValidating,
+        data,
+        error
+    }
+}
 export const useGetCatFacts = (limit) => useApi(`/facts?limit=${limit}`)
+
+export const useGetListWardrobeLocal = () => useLocalApi('/api/list-wardrobe')

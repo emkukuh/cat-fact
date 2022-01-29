@@ -9,6 +9,7 @@ export const getApiConfig = async () => {
     if (apiConfig) return apiConfig
     const response = await fetch('/api/config')
     const { api } = await response.json()
+    console.log(api)
     apiConfig = api
     return apiConfig
 }
