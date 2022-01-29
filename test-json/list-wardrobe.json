@@ -1,0 +1,44 @@
+{
+    "datas": [
+        {
+            "id": 1,
+            "name": "baju bagus",
+            "ownerEmail": "ivan@gunawan.com",
+            "status": "terpinjam",
+            "statusCode": "rented",
+            "duration": 4
+        },
+        {
+            "id": 2,
+            "name": "baju bagus sekali",
+            "ownerEmail": "anak@kuda.com",
+            "status": "tersedia",
+            "statusCode": "available",
+            "duration": 2
+        },
+        {
+            "id": 3,
+            "name": "baju murah",
+            "ownerEmail": "pamela@upstone.com",
+            "status": "terpinjam",
+            "statusCode": "rented",
+            "duration": 2
+        },
+        {
+            "id": 4,
+            "name": "baju sewa toko sebelah",
+            "ownerEmail": "emma@whyson.com",
+            "status": "terpinjam",
+            "statusCode": "rented",
+            "duration": 1
+        },
+        {
+            "id": 5,
+            "name": "baju hangat",
+            "ownerEmail": "congki@imoet.com",
+            "status": "laundry",
+            "statusCode": "laundry",
+            "duration": 2
+        }
+    ]
+}

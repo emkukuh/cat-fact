@@ -22,7 +22,7 @@ const Sidebar = () => {
                     <Link href={Directory.homeDir}>
                         <a onClick={setDefaultSelectedKey('home')}>Home</a>
                     </Link></Menu.Item>
-                <SubMenu key="sub1" icon={<UserOutlined />} title="Menu Pakaian">
+                <SubMenu key="sub1" icon={<UserOutlined />} title="Wardrobe">
                     <Menu.Item key="s11">Tambah Pakaian</Menu.Item>
                     <Menu.Item key="s12">
                         <Link href={Directory.wardrobeListDir}>
