@@ -1,6 +1,12 @@
 .container {
     margin-top: 8px;
-    /* justify-content: space-between; */
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.container:hover {
+    background-color: #d4d4d4;
+    cursor: pointer
 }
 
 .tag {

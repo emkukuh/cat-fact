@@ -12,9 +12,7 @@ export default function Home() {
     return (
         <>
             <Layout>
-                <Navbar />
                 <Layout>
-                    <Sidebar />
                     <Layout>
                         <Content>
                             <List
