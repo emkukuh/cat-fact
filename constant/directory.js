@@ -1,5 +1,6 @@
 export default {
+    homeDir: '/',
     wardrobeListDir: '/wardrobe/list',
-    homeDir: '/'
+    wardrobeAdd: '/wardrobe/add'
 }
 
