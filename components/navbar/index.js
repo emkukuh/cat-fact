@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Layout, Menu } from 'antd'
-import { UserOutlined, HomeOutlined, DownOutlined } from '@ant-design/icons';
+import { UserOutlined, HomeOutlined } from '@ant-design/icons';
 import Directory from "constant/directory";
 import styles from './index.module.css'
 
@@ -35,7 +35,9 @@ export default function Navbar() {
                         </Menu.Item>
                     </SubMenu>
                     <SubMenu key="sub2" icon={<UserOutlined />} title="Customer">
-                        <Menu.Item key="s21">List Customer</Menu.Item>
+                        <Menu.Item key="s21">
+                            <Link href={Directory.customerListDir}>List Customer</Link>
+                        </Menu.Item>
                     </SubMenu>
                     <SubMenu key="sub3" icon={<UserOutlined />} title="Transaksi">
                         <Menu.Item key="s31">Tambah Transaksi</Menu.Item>

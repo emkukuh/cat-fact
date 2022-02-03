@@ -1,6 +1,7 @@
 export default {
     homeDir: '/',
     wardrobeListDir: '/wardrobe/list',
-    wardrobeAdd: '/wardrobe/add'
+    wardrobeAdd: '/wardrobe/add',
+    customerListDir: '/customer/list',
 }
 
