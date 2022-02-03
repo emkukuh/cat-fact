@@ -5,7 +5,7 @@ import labelSizesJson from 'constant/json/labelSize.json'
 
 const { Option } = Select
 
-const Add = () => {
+const AddWardrobe = () => {
     const onSuccess = (values) => {
         console.log('success: ', values)
     }
@@ -14,6 +14,7 @@ const Add = () => {
     }
     const layout = {
         labelCol: {
+            xl: { span: 2 },
             xs: { span: 2 },
             sm: { span: 3 }
         }
@@ -54,7 +55,7 @@ const Add = () => {
                     allowClear
                 >
                     {labelSizesJson.datas.map((size) => {
-                        return <Option value={size}>{`${size.toUpperCase()}`}</Option>
+                        return <Option value={size} key={size}>{`${size.toUpperCase()}`}</Option>
                     })}
                 </Select>
             </Form.Item>
@@ -120,4 +121,4 @@ const renderInputType = (type, className) => {
     return <p>Input tidak tersedia</p>
 }
 
-export default Add
+export default AddWardrobe
