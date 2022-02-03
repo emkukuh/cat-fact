@@ -1,6 +1,5 @@
 import { Layout } from "antd"
 import Navbar from "components/navbar"
-import Sidebar from "components/sidebar"
 
 import styles from './index.module.css'
 
@@ -10,9 +9,8 @@ const PageLayout = ({ children }) => {
     return (
         <>
             <Layout>
-                {/* <Navbar /> */}
+                <Navbar />
                 <Layout>
-                    <Sidebar />
                     <Layout>
                         <Content className={styles.content}>
                             {children}

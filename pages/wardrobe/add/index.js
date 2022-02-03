@@ -14,7 +14,7 @@ const AddWardrobe = () => {
     }
     const layout = {
         labelCol: {
-            xl: { span: 2 },
+            xl: { span: 1 },
             xs: { span: 2 },
             sm: { span: 3 }
         }

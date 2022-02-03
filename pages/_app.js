@@ -7,6 +7,7 @@ import PageLayout from 'components/page-layout'
 function MyApp({ Component, pageProps }) {
   return (
     <PageLayout>
+      <Component {...pageProps} />
       <SWRConfig
         value={{
           refreshInterval: 0,
@@ -15,7 +16,6 @@ function MyApp({ Component, pageProps }) {
           revalidateOnReconnect: false,
           fetcher: fetchApi
         }}>
-        <Component {...pageProps} />
       </SWRConfig>
     </PageLayout>
   )

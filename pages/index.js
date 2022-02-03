@@ -1,7 +1,5 @@
 
 import { List, Avatar, Layout } from 'antd'
-import Navbar from '../components/navbar'
-import Sidebar from 'components/sidebar'
 import { useGetCatFacts } from '../services/api'
 
 const { Content } = Layout
