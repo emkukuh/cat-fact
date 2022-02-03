@@ -1,7 +1,7 @@
 import { Button, Form, Input, Select } from 'antd'
 import ImagePicker from 'components/image-picker/image-picker'
 import styles from './index.module.css'
-import labelSizesJson from 'constant/json/labelSize.json'
+import labelSizesJson from 'constant/json/label-size.json'
 
 const { Option } = Select
 

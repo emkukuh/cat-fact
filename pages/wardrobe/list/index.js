@@ -1,14 +1,13 @@
 import { List } from "antd";
 import WardrobeListItem from "components/wardrobe-list-item";
-import { useGetListWardrobeLocal } from "services/api";
+import wardrobeListJson from 'constant/json/wardrobe-list'
 
 const WardrobeList = () => {
-    const { loading, data, error } = useGetListWardrobeLocal()
+    const datas = wardrobeListJson.datas
     return (
         <List
             itemLayout='horizontal'
-            dataSource={data && data.datas}
-            loading={loading}
+            dataSource={datas}
             renderItem={(item) => (
                 <WardrobeListItem
                     name={item.name}

@@ -2,7 +2,7 @@ import { List } from "antd";
 import CustomerListItem from "components/customer-list-item";
 import { useGetListWardrobeLocal } from "services/api";
 
-const WardrobeList = () => {
+const CustomerList = () => {
     const { loading, data, error } = useGetListWardrobeLocal()
     return (
         <List
@@ -18,4 +18,4 @@ const WardrobeList = () => {
     )
 }
 
-export default WardrobeList
+export default CustomerList
