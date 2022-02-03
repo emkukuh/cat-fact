@@ -1,6 +1,7 @@
-import { Form, Input, Select } from 'antd'
+import { Button, Form, Input, Select } from 'antd'
 import ImagePicker from 'components/image-picker/image-picker'
 import styles from './index.module.css'
+import labelSizesJson from 'constant/json/labelSize.json'
 
 const { Option } = Select
 
@@ -52,12 +53,9 @@ const Add = () => {
                     placeholder="Select Label Size"
                     allowClear
                 >
-                    <Option value="xs">XS</Option>
-                    <Option value="s">S</Option>
-                    <Option value="m">M</Option>
-                    <Option value="l">L</Option>
-                    <Option value="xl">XL</Option>
-                    <Option value="xxl">XXL</Option>
+                    {labelSizesJson.datas.map((size) => {
+                        return <Option value={size}>{`${size.toUpperCase()}`}</Option>
+                    })}
                 </Select>
             </Form.Item>
             <Form.Item
@@ -93,10 +91,8 @@ const Add = () => {
                 </Form.Item>
             </Form.Item>
             <Form.Item
-                required
                 label="Defects"
                 name="Defects"
-                rules={[{ required: true }]}
             >
                 {renderInputType('textArea')}
             </Form.Item>
@@ -106,7 +102,15 @@ const Add = () => {
             >
                 <ImagePicker />
             </Form.Item>
-        </Form >
+            <Form.Item
+                label=" "
+                colon={false}
+            >
+                <Button type='primary' htmlType='submit'>
+                    Submit
+                </Button>
+            </Form.Item>
+        </Form>
     )
 }
 

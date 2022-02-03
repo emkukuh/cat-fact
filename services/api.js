@@ -38,3 +38,4 @@ const useLocalApi = endpoint => {
 export const useGetCatFacts = (limit) => useApi(`/facts?limit=${limit}`)
 
 export const useGetListWardrobeLocal = () => useLocalApi('/api/list-wardrobe')
+// export const useGetLabelSizesLocal = () => useLocalApi('')
