@@ -1,5 +1,5 @@
 {
-  "name": "sewasewi-admin",
+  "name": "rentoday-admin-web",
   "private": true,
   "scripts": {
     "dev": "next dev",
