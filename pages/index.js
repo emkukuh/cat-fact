@@ -1,5 +1,6 @@
 
 import { List, Avatar, Layout } from 'antd'
+import useSWR from 'swr'
 import { useGetCatFacts } from '../services/api'
 
 const { Content } = Layout

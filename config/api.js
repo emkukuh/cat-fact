@@ -8,8 +8,8 @@ export const getApiConfig = async () => {
     if (typeof window == 'undefined') return { baseUrl: process.env.API_BASE_URL }
     if (apiConfig) return apiConfig
     const response = await fetch('/api/config')
+    if (!response.ok) throw response.status
     const { api } = await response.json()
-    console.log(api)
     apiConfig = api
     return apiConfig
 }

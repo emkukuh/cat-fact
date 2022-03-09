@@ -13,15 +13,17 @@ const AddWardrobe = () => {
         console.log('error: ', error)
     }
     const layout = {
-        labelCol: {
-            xl: { span: 1 },
-            xs: { span: 2 },
-            sm: { span: 3 }
-        }
+        // labelCol: {
+        //     xl: { span: 1 },
+        //     xs: { span: 2 },
+        //     l: { span: 2 },
+        //     sm: { span: 3 },
+        // }
     }
     return (
         <Form
             {...layout}
+            layout='vertical'
             className={styles.container}
             name='basic'
             onFinish={onSuccess}
@@ -43,6 +45,36 @@ const AddWardrobe = () => {
                 rules={[{ required: true, type: 'email' }]}
             >
                 {renderInputType('input')}
+            </Form.Item>
+            <Form.Item
+                required
+                label="Category"
+                name="Category"
+                rules={[{ required: true }]}
+            >
+                <Select
+                    placeholder="Select Category"
+                    allowClear
+                >
+                    {labelSizesJson.datas.map((size) => {
+                        return <Option value={size} key={size}>{`${size.toUpperCase()}`}</Option>
+                    })}
+                </Select>
+            </Form.Item>
+            <Form.Item
+                required
+                label="Material"
+                name="Material"
+                rules={[{ required: true }]}
+            >
+                <Select
+                    placeholder="Select Material"
+                    allowClear
+                >
+                    {labelSizesJson.datas.map((size) => {
+                        return <Option value={size} key={size}>{`${size.toUpperCase()}`}</Option>
+                    })}
+                </Select>
             </Form.Item>
             <Form.Item
                 required
